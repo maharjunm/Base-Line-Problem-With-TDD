@@ -8,10 +8,19 @@ public class ShoppingBasketTest {
 
     @Test
     public void shouldHaveAtleastTwoItemsInIt() {
-        Items[] itemsList=new Items[2];
+        Item[] itemsList=new Item[2];
         ShoppingBasket shoppingBasket=new ShoppingBasket(itemsList);
 
         assertEquals(2,shoppingBasket.containsItems());
+    }
+
+    @Test
+    public void shouldAcceptOnlyItems() {
+        Item item1=null;
+        Item[] itemsList={item1};
+        ShoppingBasket shoppingBasket=new ShoppingBasket(itemsList);
+
+        assertFalse(shoppingBasket.isValidItem());
     }
 
 }

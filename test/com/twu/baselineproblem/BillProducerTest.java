@@ -8,7 +8,7 @@ public class BillProducerTest {
 
     @Test
     public void shouldHaveTotalAmountAsZeroWithoutAnyItems() {
-        Items[] itemsList={};
+        Item[] itemsList={};
         ShoppingBasket shoppingBasket=new ShoppingBasket(itemsList);
         BillProducer billProducer=new BillProducer(shoppingBasket);
 
